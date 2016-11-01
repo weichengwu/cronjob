@@ -3,9 +3,10 @@ from jinja2 import Template
 from weather import weather
 from sendMail import send_message
 from NBA import nba
+import os
 
 def template():
-    file_obj = open('./template.html', 'r+')
+    file_obj = open(os.path.join(os.path.abspath('.'), 'template.html'), 'r+')
     template_str = file_obj.read()
     temp = str(template_str).decode('utf-8')
     return Template(temp)
