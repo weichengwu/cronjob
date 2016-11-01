@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+　
+<head>
+    　　
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    　　<title>PI日报</title>
+    　　
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    　
+</head>
+<body bgcolor="#f6f8f1">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#f6f8f1">
+    <tr>
+        <td>
+            <table align="center" border="0" cellpadding="8" cellspacing="0" width="100%"
+                   style="border-collapse: collapse;">
+                <tr>
+                    <td style="color: #333333; font-size: 22px;" bgcolor="#c7d8e7">天气概况</td>
+                </tr>
+                　
+                <tr>
+                    　　
+                    <td style="color: #333333; font-size: 16px;" bgcolor="white">今天是{{ date }}</td>
+                    　
+                </tr>
+                　
+                <tr>
+                    　　
+                    <td style="color: #333333; font-size: 16px;" bgcolor="white">上海天气:{{ weather }}, 气温:{{ temperature }}</td>
+                    　
+                </tr>
+                <tr>
+                    <td style="padding: 8px"></td>
+                </tr>
+                <tr>
+                    <td style="margin-top: 16px; font-size: 22px;" bgcolor="#c7d8e7">今日NBA</td>
+                </tr>
+                {% if nba %}
+                {% for game in nba %}
+                <tr>
+                    <td style="padding: 8px; font-size: 16px;" bgcolor="white">{{game}}</td>
+                </tr>
+                {% endfor %}
+                {% else %}
+                <tr>
+                    <td style="padding: 8px; font-size: 16px" bgcolor="white">没有比赛</td>
+                </tr>
+                {% endif%}
+
+            </table>
+        </td>
+
+    </tr>
+
+</table>
+</body>
+</html>
